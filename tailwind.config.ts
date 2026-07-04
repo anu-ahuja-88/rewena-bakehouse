@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        cta: 'var(--color-cta)',
-        cream: 'var(--color-cream)',
-        'cream-raised': 'var(--color-cream-raised)',
-        'ink-soft': 'var(--color-ink-soft)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        cta: 'rgb(var(--color-cta) / <alpha-value>)',
+        cream: 'rgb(var(--color-cream) / <alpha-value>)',
+        'cream-raised': 'rgb(var(--color-cream-raised) / <alpha-value>)',
+        'ink-soft': 'rgb(var(--color-ink-soft) / <alpha-value>)',
       },
       fontFamily: {
         heading: 'var(--font-heading)',

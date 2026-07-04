@@ -31,15 +31,27 @@ const localBusinessSchema = {
   priceRange: '$$',
 }
 
+// Tailwind's `/opacity` colour modifier (e.g. text-cream/60) only works if the
+// CSS variable holds space-separated RGB channels, not a hex string. Converting
+// here keeps business.ts readable (plain hex) while making every opacity utility
+// used across components actually render instead of silently failing invisible.
+function hexToRgbChannels(hex: string): string {
+  const clean = hex.replace('#', '')
+  const r = parseInt(clean.substring(0, 2), 16)
+  const g = parseInt(clean.substring(2, 4), 16)
+  const b = parseInt(clean.substring(4, 6), 16)
+  return `${r} ${g} ${b}`
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const cssVars = `
     :root {
-      --color-primary: ${business.design.primaryColor};
-      --color-secondary: ${business.design.secondaryColor};
-      --color-cta: ${business.design.ctaColor};
-      --color-cream: ${business.design.creamColor};
-      --color-cream-raised: ${business.design.creamRaisedColor};
-      --color-ink-soft: ${business.design.inkSoftColor};
+      --color-primary: ${hexToRgbChannels(business.design.primaryColor)};
+      --color-secondary: ${hexToRgbChannels(business.design.secondaryColor)};
+      --color-cta: ${hexToRgbChannels(business.design.ctaColor)};
+      --color-cream: ${hexToRgbChannels(business.design.creamColor)};
+      --color-cream-raised: ${hexToRgbChannels(business.design.creamRaisedColor)};
+      --color-ink-soft: ${hexToRgbChannels(business.design.inkSoftColor)};
       --font-heading: '${business.design.headingFont}', serif;
       --font-body: '${business.design.bodyFont}', sans-serif;
     }
