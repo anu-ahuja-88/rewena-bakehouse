@@ -22,7 +22,7 @@ export default function Testimonials() {
         >
           <span className="text-cta text-xs font-semibold uppercase tracking-[0.35em]">Our Customers</span>
           <h2 className="font-heading font-black text-secondary text-4xl md:text-5xl mt-4 tracking-tight">
-            What They Come Back For
+            In Their Words
           </h2>
         </motion.div>
 
