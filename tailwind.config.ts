@@ -12,6 +12,9 @@ const config: Config = {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         cta: 'var(--color-cta)',
+        cream: 'var(--color-cream)',
+        'cream-raised': 'var(--color-cream-raised)',
+        'ink-soft': 'var(--color-ink-soft)',
       },
       fontFamily: {
         heading: 'var(--font-heading)',

@@ -1,13 +1,27 @@
-// ============================================================
-// PAGE — Built fresh for each client.
-// Claude assembles this file after building all components.
-// Do not pre-populate with imports — each mockup is unique.
-// ============================================================
+import Nav from '@/components/Nav'
+import Hero from '@/components/Hero'
+import Philosophy from '@/components/Philosophy'
+import Menu from '@/components/Menu'
+import Gallery from '@/components/Gallery'
+import Stats from '@/components/Stats'
+import Testimonials from '@/components/Testimonials'
+import VisitUs from '@/components/VisitUs'
+import CTA from '@/components/CTA'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main>
-      {/* Components are built fresh per client using ui-ux-pro-max + design skills + 21st.dev */}
+      <Nav />
+      <Hero />
+      <Philosophy />
+      <Menu />
+      <Gallery />
+      <Stats />
+      <Testimonials />
+      <VisitUs />
+      <CTA />
+      <Footer />
     </main>
   )
 }

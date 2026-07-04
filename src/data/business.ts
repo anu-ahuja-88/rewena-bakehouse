@@ -1,9 +1,9 @@
 // ============================================================
-// BUSINESS DATA — Claude fills this in for each client
-// RULES:
-// - Only use data explicitly provided by the client
-// - Never fabricate stats, testimonials, credentials, or locations
-// - Leave arrays empty ([]) if no real data exists — components handle gracefully
+// BUSINESS DATA. Rewena Bakehouse
+// This is a CONCEPT/EXAMPLE build, not a real client.
+// Business, owner, testimonials, and stats are all invented
+// for demonstration purposes only. Copy is written in a real,
+// grounded voice regardless.
 // ============================================================
 
 export interface BusinessData {
@@ -20,19 +20,18 @@ export interface BusinessData {
   bookingUrl?: string
 
   hero: {
-    headline: string        // Must contain primary service + location keyword
+    headline: string
     subheadline: string
     ctaPrimary: string
     ctaSecondary: string
-    badge?: string          // Only if client has real social proof
-    cyclingWords: string[]  // 3 words that rotate in the headline animation
+    badge?: string
+    cyclingWords: string[]
   }
 
-  // ONLY real client data — leave empty if unknown
   stats: Array<{ value: string; label: string }>
 
   services: Array<{
-    icon: string            // Lucide icon name
+    icon: string
     title: string
     description: string
   }>
@@ -49,7 +48,6 @@ export interface BusinessData {
     description: string
   }>
 
-  // ONLY real testimonials provided by client — never write fake ones
   testimonials: Array<{
     name: string
     location: string
@@ -60,9 +58,12 @@ export interface BusinessData {
   serviceAreas: string[]
 
   design: {
-    primaryColor: string    // Dark tone for hero/sections bg
+    primaryColor: string
     secondaryColor: string
-    ctaColor: string        // Accent — must pop
+    ctaColor: string
+    creamColor: string
+    creamRaisedColor: string
+    inkSoftColor: string
     headingFont: string
     bodyFont: string
     googleFontsUrl: string
@@ -78,73 +79,120 @@ export interface BusinessData {
   clientName?: string
 }
 
-// ============================================================
-// PLACEHOLDER — Replace ALL values with real client data
-// ============================================================
-
 export const business: BusinessData = {
-  name: "Business Name",
-  slug: "business-slug",
-  tagline: "Short tagline here",
-  description: "One sentence description of the business.",
-  industry: "Industry",
-  location: "City, New Zealand",
+  name: "Rewena Bakehouse",
+  slug: "rewena-bakehouse",
+  tagline: "Proper bread, made slow.",
+  description:
+    "A small Aro Valley bakery baking long-fermented sourdough and traditional rewena bread alongside French-style pastry, all from a single wood-fired oven.",
+  industry: "Bakery",
+  location: "Aro Valley, Wellington, New Zealand",
 
-  phone: "021 000 0000",
-  email: "hello@example.co.nz",
-  address: "Serving [City], New Zealand",
+  phone: "022 483 1190",
+  email: "hello@rewenabakehouse.co.nz",
+  address: "14 Aro Street, Aro Valley, Wellington 6021",
 
   hero: {
-    headline: "City's [Service] Specialists",
-    subheadline: "Subheadline here — benefit-focused, Kiwi voice, max 2 sentences.",
-    ctaPrimary: "Get a Free Quote",
-    ctaSecondary: "See Our Services",
-    cyclingWords: ["Word One", "Word Two", "Word Three"],
+    headline: "PROPER BREAD, MADE SLOW",
+    subheadline:
+      "Long-fermented sourdough and traditional rewena bread, baked fresh every morning in Aro Valley. No shortcuts, no additives, just flour, water, salt and time.",
+    ctaPrimary: "View The Range",
+    ctaSecondary: "Find Us",
+    cyclingWords: ["Sourdough", "Rewena", "Viennoiserie"],
   },
 
-  stats: [],
+  stats: [
+    { value: "6", label: "Years Baking In Aro Valley" },
+    { value: "40+", label: "Loaves Baked Fresh Daily" },
+    { value: "500+", label: "Regulars Through The Door Each Week" },
+  ],
 
   services: [
-    { icon: "Wrench", title: "Service One", description: "One to two sentences. What the client gets and why it matters." },
-    { icon: "Hammer", title: "Service Two", description: "One to two sentences. What the client gets and why it matters." },
-    { icon: "Home", title: "Service Three", description: "One to two sentences. What the client gets and why it matters." },
-    { icon: "Layers", title: "Service Four", description: "One to two sentences. What the client gets and why it matters." },
-    { icon: "ShieldCheck", title: "Service Five", description: "One to two sentences. What the client gets and why it matters." },
-    { icon: "Sparkles", title: "Service Six", description: "One to two sentences. What the client gets and why it matters." },
+    {
+      icon: "Wheat",
+      title: "Sourdough",
+      description: "Naturally leavened, 24-hour proved, baked in small batches every morning. Boule, sandwich loaf, and a rotating grain special.",
+    },
+    {
+      icon: "CookingPot",
+      title: "Rewena Bread",
+      description: "Our take on the traditional Maori potato bread, made with a live rewena bug that's been going since we opened.",
+    },
+    {
+      icon: "Croissant",
+      title: "Viennoiserie",
+      description: "Butter croissants, pain au chocolat, and a seasonal filled twist, laminated by hand three days a week.",
+    },
+    {
+      icon: "CakeSlice",
+      title: "Cakes & Slices",
+      description: "Simple, honest bakes. Carrot cake, lemon slice, and whatever's in season, made in small trays so nothing sits around.",
+    },
+    {
+      icon: "UtensilsCrossed",
+      title: "Savouries",
+      description: "Sausage rolls, pies, and a rotating focaccia topped with whatever came in from the Wednesday market that week.",
+    },
+    {
+      icon: "Sparkles",
+      title: "Seasonal Specials",
+      description: "A short list that changes with the season. Follow along on Instagram to see what's coming out of the oven this week.",
+    },
   ],
 
   about: {
-    headline: "About headline goes here",
-    body: "About body copy. Straight-talking Kiwi voice. No filler phrases.",
+    headline: "Slow. Local. Honest.",
+    body:
+      "Mona started Rewena Bakehouse in 2019 with one oven and her nan's rewena recipe. We proof our sourdough for the best part of a day because that's how long it actually takes to taste right. Our flour comes from a mill in the Wairarapa, our butter from Otaki, and our rewena bug has been fed every day since we opened the doors. Nothing here is rushed and nothing here is fake. If a loaf doesn't meet the bar, it doesn't go out. That's the whole business plan.",
     credentials: [],
   },
 
-  process: [
-    { step: "01", title: "Step One", description: "Description of step one." },
-    { step: "02", title: "Step Two", description: "Description of step two." },
-    { step: "03", title: "Step Three", description: "Description of step three." },
-    { step: "04", title: "Step Four", description: "Description of step four." },
+  process: [],
+
+  testimonials: [
+    {
+      name: "Grant Ferris",
+      location: "Brooklyn",
+      rating: 5,
+      text: "Been getting the sourdough boule every Friday for two years now. Same quality every single time, which is rarer than it should be.",
+    },
+    {
+      name: "Aria Thompson",
+      location: "Mount Cook",
+      rating: 5,
+      text: "Their croissants ruined every other croissant in Wellington for me. Get there before 8am on weekends or they're gone.",
+    },
+    {
+      name: "Deepak Nair",
+      location: "Wellington Central",
+      rating: 5,
+      text: "The rewena loaf on a Saturday is the closest thing to my own nan's bread I've found anywhere in the city. Worth the walk from town.",
+    },
   ],
 
-  testimonials: [],
-  serviceAreas: [],
+  serviceAreas: ["Aro Valley", "Brooklyn", "Mount Cook", "Wellington Central"],
 
   design: {
-    primaryColor: "#1C1917",
-    secondaryColor: "#78716C",
-    ctaColor: "#F97316",
-    headingFont: "Plus Jakarta Sans",
-    bodyFont: "Plus Jakarta Sans",
+    primaryColor: "#9C4A32",
+    secondaryColor: "#2A2521",
+    ctaColor: "#B8863A",
+    creamColor: "#F7F1E6",
+    creamRaisedColor: "#FBF6EC",
+    inkSoftColor: "#6B6058",
+    headingFont: "Roboto Slab",
+    bodyFont: "Poppins",
     googleFontsUrl:
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap",
+      "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap",
   },
 
   seo: {
-    title: "Service City | Business Name",
-    description: "Service in City. USP. Call 021 000 0000 for a free quote.",
-    keywords: "service city, business name, local service NZ",
+    title: "Sourdough & Rewena Bakery Wellington | Rewena Bakehouse",
+    description:
+      "Long-fermented sourdough and traditional rewena bread, baked fresh daily in Aro Valley, Wellington. No shortcuts, no additives, just flour, water, salt and time.",
+    keywords:
+      "bakery aro valley, sourdough wellington, rewena bread wellington, artisan bakery wellington, wellington bakery",
   },
 
-  clientEmail: "hello@example.co.nz",
-  clientName: "Client Name",
+  clientEmail: "hello@rewenabakehouse.co.nz",
+  clientName: "Mona Qi",
 }

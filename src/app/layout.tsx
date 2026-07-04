@@ -37,7 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       --color-primary: ${business.design.primaryColor};
       --color-secondary: ${business.design.secondaryColor};
       --color-cta: ${business.design.ctaColor};
-      --font-heading: '${business.design.headingFont}', sans-serif;
+      --color-cream: ${business.design.creamColor};
+      --color-cream-raised: ${business.design.creamRaisedColor};
+      --color-ink-soft: ${business.design.inkSoftColor};
+      --font-heading: '${business.design.headingFont}', serif;
       --font-body: '${business.design.bodyFont}', sans-serif;
     }
   `
